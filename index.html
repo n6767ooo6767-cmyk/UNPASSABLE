@@ -84,7 +84,7 @@ R("Contain exactly 1 \"Y\".","Zawieraj dokładnie 1 „Y”.","Zawieraj dokładn
 R("Contain exactly 1 \"#\".","Zawieraj dokładnie 1 „#”.","Zawieraj dokładnie 1 „#”.",s=>(s.match(new RegExp("#","g"))||[]).length===1),
 R("Start with U.","Zacznij od U.","Zacznij od U.",s=>s.startsWith('U')),
 R("End with #.","Zakończ na #.","Zakończ na #.",s=>s.endsWith('#')),
-R("Contain UN.","Zawieraj UN.","Zawieraj UN.",s=>s.includes('UN')),
+R("Contain UN (any case).","Zawieraj UN (bez względu na wielkość liter).","Zawieraj UN (bez względu na wielkość liter).",s=>/un/i.test(s)),
 R("Contain Pa.","Zawieraj Pa.","Zawieraj Pa.",s=>s.includes('Pa')),
 R("Contain Ss.","Zawieraj Ss.","Zawieraj Ss.",s=>s.includes('Ss')),
 R("Contain Ab.","Zawieraj Ab.","Zawieraj Ab.",s=>s.includes('Ab')),
